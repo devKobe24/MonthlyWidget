@@ -18,6 +18,8 @@
 		CD5F43022AEB0AFB000B36D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD5F43012AEB0AFB000B36D8 /* Assets.xcassets */; };
 		CD5F43062AEB0AFB000B36D8 /* MonthlyWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = CD5F42F92AEB0AFA000B36D8 /* MonthlyWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		CD5F430D2AEB23D0000B36D8 /* Date+.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5F430B2AEB23AE000B36D8 /* Date+.swift */; };
+		CD5F43132AEB2985000B36D8 /* MonthlyConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5F43122AEB2985000B36D8 /* MonthlyConfig.swift */; };
+		CD5F43152AEB2DF8000B36D8 /* Color+.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5F43142AEB2DF8000B36D8 /* Color+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +60,8 @@
 		CD5F43012AEB0AFB000B36D8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CD5F43032AEB0AFB000B36D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CD5F430B2AEB23AE000B36D8 /* Date+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+.swift"; sourceTree = "<group>"; };
+		CD5F43122AEB2985000B36D8 /* MonthlyConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthlyConfig.swift; sourceTree = "<group>"; };
+		CD5F43142AEB2DF8000B36D8 /* Color+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +87,7 @@
 		CD5F42BE2AEB07EE000B36D8 = {
 			isa = PBXGroup;
 			children = (
+				CD5F43112AEB296B000B36D8 /* Model */,
 				CD5F430E2AEB23E5000B36D8 /* Extension */,
 				CD5F42C92AEB07EE000B36D8 /* Monthly */,
 				CD5F42FC2AEB0AFA000B36D8 /* MonthlyWidget */,
@@ -143,8 +148,17 @@
 			isa = PBXGroup;
 			children = (
 				CD5F430B2AEB23AE000B36D8 /* Date+.swift */,
+				CD5F43142AEB2DF8000B36D8 /* Color+.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		CD5F43112AEB296B000B36D8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CD5F43122AEB2985000B36D8 /* MonthlyConfig.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,8 +272,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				CD5F430D2AEB23D0000B36D8 /* Date+.swift in Sources */,
+				CD5F43152AEB2DF8000B36D8 /* Color+.swift in Sources */,
 				CD5F42FE2AEB0AFA000B36D8 /* MonthlyWidgetBundle.swift in Sources */,
 				CD5F43002AEB0AFA000B36D8 /* MonthlyWidget.swift in Sources */,
+				CD5F43132AEB2985000B36D8 /* MonthlyConfig.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
