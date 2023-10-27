@@ -59,27 +59,33 @@ struct DayEntry: TimelineEntry {
 // MARK: - View
 struct MonthlyWidgetEntryView : View {
     var entry: DayEntry
+    var config: MonthlyConfig
+    
+    init(entry: DayEntry) {
+        self.entry = entry
+        self.config = MonthlyConfig.determineConfig(from: entry.date)
+    }
     
     var body: some View {
         ZStack {
             ContainerRelativeShape()
-                .fill(.gray.gradient)
+                .fill(config.backgroundColor.gradient)
             
             VStack {
                 HStack(spacing: 5) {
-                    Text("🤪")
+                    Text(config.emojiText)
                         .font(.title)
                     Text(entry.date.weekdayDisplayFormat)
                         .font(.title3)
                         .fontWeight(.bold)
                         .minimumScaleFactor(0.6)
-                        .foregroundStyle(.black.opacity(0.5))
+                        .foregroundStyle(config.weekdayTextColor)
                     Spacer()
                 }
                 
                 Text(entry.date.dayDisplayFormat)
                     .font(.system(size: 80, weight: .heavy))
-                    .foregroundStyle(.white.opacity(0.8))
+                    .foregroundStyle(config.dayTextColor)
             }
             .padding()
         }
@@ -104,8 +110,25 @@ struct MonthlyWidget: Widget {
 
 struct MonthlyWidget_Previews: PreviewProvider {
     static var previews: some View {
-        MonthlyWidgetEntryView(entry: DayEntry(date: Date()))
+        let date = dateToDisplay(year: 2023, month: 12, day: 24)
+        
+        MonthlyWidgetEntryView(entry: DayEntry(date: date))
             .previewContext(WidgetPreviewContext(family: .systemSmall))
+    }
+    
+    static func dateToDisplay(year: Int, month: Int, day: Int) -> Date {
+        let components = DateComponents(
+            calendar: Calendar.current,
+            year: year,
+            month: month,
+            day: day
+        )
+        
+        guard let date = Calendar.current.date(from: components) else {
+            return Date()
+        }
+        
+        return date
     }
 }
 
