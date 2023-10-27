@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CD017C942AEB5FA90099D7E1 /* MonthlyContents.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD017C922AEB5D980099D7E1 /* MonthlyContents.swift */; };
 		CD5F42CB2AEB07EE000B36D8 /* MonthlyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5F42CA2AEB07EE000B36D8 /* MonthlyApp.swift */; };
 		CD5F42CD2AEB07EE000B36D8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5F42CC2AEB07EE000B36D8 /* ContentView.swift */; };
 		CD5F42CF2AEB07EF000B36D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD5F42CE2AEB07EF000B36D8 /* Assets.xcassets */; };
@@ -47,6 +48,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		CD017C922AEB5D980099D7E1 /* MonthlyContents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthlyContents.swift; sourceTree = "<group>"; };
 		CD5F42C72AEB07EE000B36D8 /* Monthly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Monthly.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD5F42CA2AEB07EE000B36D8 /* MonthlyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthlyApp.swift; sourceTree = "<group>"; };
 		CD5F42CC2AEB07EE000B36D8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -156,6 +158,7 @@
 		CD5F43112AEB296B000B36D8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				CD017C922AEB5D980099D7E1 /* MonthlyContents.swift */,
 				CD5F43122AEB2985000B36D8 /* MonthlyConfig.swift */,
 			);
 			path = Model;
@@ -273,6 +276,7 @@
 			files = (
 				CD5F430D2AEB23D0000B36D8 /* Date+.swift in Sources */,
 				CD5F43152AEB2DF8000B36D8 /* Color+.swift in Sources */,
+				CD017C942AEB5FA90099D7E1 /* MonthlyContents.swift in Sources */,
 				CD5F42FE2AEB0AFA000B36D8 /* MonthlyWidgetBundle.swift in Sources */,
 				CD5F43002AEB0AFA000B36D8 /* MonthlyWidget.swift in Sources */,
 				CD5F43132AEB2985000B36D8 /* MonthlyConfig.swift in Sources */,
